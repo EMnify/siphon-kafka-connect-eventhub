@@ -41,8 +41,6 @@ public class EventHubClientProvider {
                     executorService,
                     new EventHubClientOptions()
             ).get();
-        } catch (EventHubException ex) {
-            throw new IOException("Unable to create token provider", ex);
         } catch (IOException ex) {
             throw new IOException("Unable to connect to EventHubs");
         } catch (ExecutionException|InterruptedException ex) {
